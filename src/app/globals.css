@@ -2,20 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gray-100 text-gray-900;
+  font-family: 'Inter', sans-serif;
 }
+
+/* Customize the slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #4b5563; /* Orange-500 */
+  height: 4px;
+  border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #f97316; /* Orange-500 for thumb */
+  border: 2px solid #4b5563; /* Optional, for a cleaner look */
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px; /* Aligns thumb vertically with the track */
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: #4b5563; /* Orange-500 */
+  height: 4px;
+  border-radius: 2px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: #f97316; /* Orange-500 for thumb */
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 0; /* Firefox doesn't support this, but we align by default */
+}
+
+/* Hide outline when focused */
+input[type="range"]:focus {
+  outline: none;
+}
+
