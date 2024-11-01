@@ -1,4 +1,5 @@
-import WorkoutForm from "../components/WorkOutForm";
+import SessionFocus from "@/components/SessionFocus";
+import WorkOutForm from "../components/WorkOutForm";
 
 export const metadata = {
   title: "Workout Tracker",
@@ -9,7 +10,8 @@ export default function Home() {
   return (
     <main>
       <title className="text-4xl font-bold text-orange-500">Workout Tracker</title>
-      <WorkoutForm />
+      <SessionFocus />
+      <WorkOutForm />
     </main>
   );
 }
